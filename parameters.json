@@ -1,8 +1,0 @@
-{
-    "authority": "https://login.microsoftonline.com/cms-cmno.com",
-    "client_id": "8752cb4a-ecc4-419a-a93f-c2ce1b1df7da",
-    "scope": ["https://graph.microsoft.com/.default"],
-    "thumbprint": "BF7E33A45FEEBA502386E3B24ADAF0C60E777A30",
-    "private_key_file": "private.key",
-    "endpoint": "https://graph.microsoft.com/v1.0/users"
-}
