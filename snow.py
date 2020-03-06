@@ -35,7 +35,7 @@ enddate = str(year)+"-"+str(month)
 
 #Sets the first POST request to the instance sending our OAuth 2.0 token
 
-url_o = "https://cmno.service-now.com/oauth_token.do"
+url_o = "https://instance_name.service-now.com/oauth_token.do"
 post_body = {
 'content_type':'application/json',
 'grant_type':'password', 
@@ -55,7 +55,7 @@ get_body = {
 'Authorization':'Bearer',
 'Token':'send_post(url_o,post_body)',
 }
-url="https://cmno.service-now.com/api/now/table/incident?sysparm_query=100"
+url="https://instance_name.service-now.com/api/now/table/incident?sysparm_query=100"
 
 
 #Sets proper headers
