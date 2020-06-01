@@ -30,7 +30,8 @@ def get_text(soup):
 def check_mailbox(name):
     """ Function to check a live mailbox - args: username """
     # First we build the url string
-    url ="https://account.live.com/password/reset?wreply=https%3A%2F%2Flogin.live.com%2Flogin.srf%3Fwa%3Dwsignin1.0%26rpsnv%3D13%26ct%3D1561787618%26rver%3D7.0.6737.0%26wp%3DMBI_SSL%26wreply%3Dhttps%253a%252f%252foutlook.live.com%252fowa%252f%253fnlp%253d1%2526RpsCsrfState%253df91accaa-e96b-ee13-52ec-7bd10ae43fd1%26id%3D292841%26aadredir%3D1%26CBCXT%3Dout%26lw%3D1%26fl%3Ddob%252cflname%252cwld%26cobrandid%3D90015%26contextid%3D55D510099ED60F79%26bk%3D1561787619&id=292841&uiflavor=web&cobrandid=90015&uaid=b9cece3ccdc54586a6bd1347776f9f3c&mkt=EN-GB&lc=21514&bk=1561787619&mn=" + name + "%40cms-cmno.com"
+    # replace your domain.com with your domain in the URL string below
+    url ="https://account.live.com/password/reset?wreply=https%3A%2F%2Flogin.live.com%2Flogin.srf%3Fwa%3Dwsignin1.0%26rpsnv%3D13%26ct%3D1561787618%26rver%3D7.0.6737.0%26wp%3DMBI_SSL%26wreply%3Dhttps%253a%252f%252foutlook.live.com%252fowa%252f%253fnlp%253d1%2526RpsCsrfState%253df91accaa-e96b-ee13-52ec-7bd10ae43fd1%26id%3D292841%26aadredir%3D1%26CBCXT%3Dout%26lw%3D1%26fl%3Ddob%252cflname%252cwld%26cobrandid%3D90015%26contextid%3D55D510099ED60F79%26bk%3D1561787619&id=292841&uiflavor=web&cobrandid=90015&uaid=b9cece3ccdc54586a6bd1347776f9f3c&mkt=EN-GB&lc=21514&bk=1561787619&mn=" + name + "%yourdomain.com"
     http = urllib3.PoolManager()
     response = http.request('GET', url)
     soup = bs(response.data, "lxml")
